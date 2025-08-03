@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Text Extractor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+</head>
+<body>
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-content" id="menuContent">
+            <div class="menu-item" onclick="extractor.showAbout()">about</div>
+            <div class="menu-item" onclick="extractor.openRepo()">repository</div>
+            <div class="menu-item" onclick="extractor.openIssues()">report issue</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Image Text Extractor</h1>
+        
+        <div class="upload-section">
+            <label for="imageInput" class="upload-btn">
+                <span>Choose Images</span>
+                <input type="file" id="imageInput" accept="image/*" multiple>
+            </label>
+        </div>
+
+        <div class="images-container" id="imagesContainer">
+            <!-- uploaded images will be displayed here -->
+        </div>
+
+        <div class="controls">
+            <button id="extractBtn" class="extract-btn" disabled>Extract Text</button>
+            <button id="clearBtn" class="clear-btn">Clear All</button>
+        </div>
+
+        <div class="status-section" id="statusSection" style="display: none;">
+            <h2>Processing Status</h2>
+            <div class="status-container" id="statusContainer">
+                <!-- real-time status updates will be displayed here -->
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <h2>Extracted Text</h2>
+                <div class="results-actions">
+                    <button id="copyBtn" class="action-btn copy-btn" disabled>Copy All</button>
+                    <button id="clearResultsBtn" class="action-btn clear-results-btn" disabled>Clear Results</button>
+                </div>
+            </div>
+            <div class="results-container" id="resultsContainer">
+                <p class="placeholder">upload images and click extract to see results</p>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>extracting text...</p>
+        </div>
+    </div>
+
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>about</h3>
+                <button class="close-btn" onclick="extractor.closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p>image text extractor is a simple web application that uses ocr technology to extract text from uploaded images.</p>
+                <p>features:</p>
+                <ul>
+                    <li>upload multiple images</li>
+                    <li>real-time processing status</li>
+                    <li>copy extracted text</li>
+                    <li>dark theme interface</li>
+                    <li>responsive design</li>
+                </ul>
+                <p>built with html, css, javascript and tesseract.js</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
