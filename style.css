@@ -79,8 +79,8 @@ p:not(:last-child) {
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
-    opacity: 0;
-    animation: fade-in ease-out 300ms 1.2s forwards;
+    opacity: 1;
+    /* animation: fade-out ease-out 300ms 1.2s forwards; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +88,7 @@ p:not(:last-child) {
     font-size: 3rem;
     cursor: pointer;
     transform: scale(1);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     text-align: center;
 }
 
@@ -105,9 +105,9 @@ p:not(:last-child) {
     transition: transform 0.3s ease;
 }
 
-@keyframes fade-in {
+@keyframes fade-out {
     to {
-        opacity: 1;
+        opacity: 0;
     }
 }
 

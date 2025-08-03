@@ -61,11 +61,6 @@ class ImageTextExtractor {
         window.open('https://github.com/ShiiiivanshSingh/img2txt', '_blank');
     }
 
-    openIssues() {
-        this.closeMenu();
-        window.open('https://github.com/ShiiiivanshSingh/img2txt/issues', '_blank');
-    }
-
     handleImageUpload(event) {
         const files = Array.from(event.target.files);
         
@@ -355,4 +350,17 @@ class ImageTextExtractor {
     }
 }
 
-const extractor = new ImageTextExtractor(); 
+const extractor = new ImageTextExtractor();
+
+// global wrapper
+function openRepo() {
+    extractor.openRepo();
+}
+
+function showAbout() {
+    extractor.showAbout();
+}
+
+function closeModal() {
+    extractor.closeModal();
+} 
