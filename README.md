@@ -1,14 +1,14 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1>Image Text Extractor 📸</h1>
-  <p>A powerful web application that extracts text from uploaded images using advanced OCR technology. Built with a clean dark theme interface, real-time processing feedback, and support for multiple image formats.</p>
+  <h1>img2txt</h1>
+  <p>Image To Text is a simple website that extracts text from uploaded images using OCR.</p>
   
-  <a href="https://shiiiivanshsingh.github.io/img2txt/"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
+  <a href="https://github.com/ShiiiivanshSingh/img2txt"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
 
 </div>
 
-Welcome to Image Text Extractor! A modern web application built with HTML, CSS, and JavaScript that uses Tesseract.js OCR technology to extract text from uploaded images. With an intuitive dark theme interface, real-time processing status, and comprehensive error handling, it's perfect for digitizing documents, extracting text from screenshots, processing handwritten notes, and converting image-based text into editable content!
+Welcome to Image Text Extractor! it's perfect for digitizing documents, extracting text from screenshots, processing handwritten notes, and converting image-based text into editable content!
 
 ## ✨ Key Features
 
