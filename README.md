@@ -4,7 +4,7 @@
   <h1>Image Text Extractor 📸</h1>
   <p>A powerful web application that extracts text from uploaded images using advanced OCR technology. Built with a clean dark theme interface, real-time processing feedback, and support for multiple image formats.</p>
   
-  <a href="https://github.com/ShiiiivanshSingh/img2txt"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
+  <a href="https://shiiiivanshsingh.github.io/img2txt/"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
 
 </div>
 
