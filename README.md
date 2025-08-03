@@ -4,7 +4,7 @@
   <h1>Image Text Extractor 📸</h1>
   <p>A powerful web application that extracts text from uploaded images using advanced OCR technology. Built with a clean dark theme interface, real-time processing feedback, and support for multiple image formats.</p>
   
-  <a href="#"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
+  <a href="https://github.com/ShiiiivanshSingh/img2txt"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
 
 </div>
 
@@ -66,8 +66,8 @@ Welcome to Image Text Extractor! A modern web application built with HTML, CSS, 
 ### Installation
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd image-text-extractor
+git clone https://github.com/ShiiiivanshSingh/img2txt
+cd img2txt
 ```
 
 2. Open the application:
@@ -119,11 +119,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 </div>
 
 <div align="center">
-  <a href="#"><img src="https://img.shields.io/badge/📸%20Try%20Image%20Text%20Extractor%20Now-4285F4?style=for-the-badge" alt="Try Image Text Extractor Now"></a>
+  <a href="https://github.com/ShiiiivanshSingh/img2txt"><img src="https://img.shields.io/badge/📸%20Try%20Image%20Text%20Extractor%20Now-4285F4?style=for-the-badge" alt="Try Image Text Extractor Now"></a>
 </div>
 
 <div align="center">
 <br>
 
-  Built with ♥️ by [Your Name].
+  Built with ♥️ by Shivansh Pratap Singh.
 </div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -58,12 +58,12 @@ class ImageTextExtractor {
 
     openRepo() {
         this.closeMenu();
-        window.open('https://github.com/yourusername/image-text-extractor', '_blank');
+        window.open('https://github.com/ShiiiivanshSingh/img2txt', '_blank');
     }
 
     openIssues() {
         this.closeMenu();
-        window.open('https://github.com/yourusername/image-text-extractor/issues', '_blank');
+        window.open('https://github.com/ShiiiivanshSingh/img2txt/issues', '_blank');
     }
 
     handleImageUpload(event) {
