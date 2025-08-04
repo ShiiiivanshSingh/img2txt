@@ -3,7 +3,8 @@
 <div align="center">
   <h1>img2txt</h1>
   <p>Image To Text is a simple website that extracts text from uploaded images using OCR.</p>
-  
+ 
+ 
   <a href="https://shiiiivanshsingh.github.io/img2txt/"><img src="https://img.shields.io/badge/Image-Text_Extractor-0066FF?style=for-the-badge&logo=javascript&logoColor=white" alt="Image Text Extractor"></a>
 
 </div>
