@@ -29,7 +29,7 @@ class ImageTextExtractor {
         this.copyBtn.addEventListener('click', () => this.copyAllText());
         this.clearResultsBtn.addEventListener('click', () => this.clearResults());
         this.hamburgerIcon.addEventListener('click', () => this.toggleMenu());
-        
+
         document.addEventListener('click', (e) => {
             if (!this.hamburgerIcon.contains(e.target) && !this.menuContent.contains(e.target)) {
                 this.closeMenu();
@@ -63,7 +63,7 @@ class ImageTextExtractor {
 
     handleImageUpload(event) {
         const files = Array.from(event.target.files);
-        
+
         if (files.length === 0) return;
 
         let validFiles = 0;
@@ -74,7 +74,7 @@ class ImageTextExtractor {
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     const imageData = {
-                        id: Date.now() + Math.random(),
+                        id: String(Date.now() + Math.random()),
                         file: file,
                         src: e.target.result,
                         name: file.name
@@ -107,12 +107,12 @@ class ImageTextExtractor {
         const imageItem = document.createElement('div');
         imageItem.className = 'image-item';
         imageItem.dataset.id = imageData.id;
-        
+
         imageItem.innerHTML = `
             <img src="${imageData.src}" alt="${imageData.name}">
             <button class="remove-btn" onclick="extractor.removeImage('${imageData.id}')">×</button>
         `;
-        
+
         this.imagesContainer.appendChild(imageItem);
     }
 
@@ -127,7 +127,9 @@ class ImageTextExtractor {
     }
 
     updateExtractButton() {
-        this.extractBtn.disabled = this.images.length === 0;
+        const hasImages = this.images.length > 0;
+        this.extractBtn.disabled = !hasImages;
+        this.clearBtn.disabled = !hasImages;
     }
 
     updateActionButtons() {
@@ -144,10 +146,10 @@ class ImageTextExtractor {
             <span class="timestamp">${timestamp}</span>
             <span class="message">${message}</span>
         `;
-        
+
         this.statusContainer.appendChild(statusItem);
         this.statusContainer.scrollTop = this.statusContainer.scrollHeight;
-        
+
         if (this.statusContainer.children.length > 0) {
             this.statusSection.style.display = 'block';
         }
@@ -171,7 +173,7 @@ class ImageTextExtractor {
             for (let i = 0; i < this.images.length; i++) {
                 const image = this.images[i];
                 this.addStatusMessage(`processing ${image.name} (${i + 1}/${this.images.length})`, 'processing');
-                
+
                 try {
                     const result = await this.extractTextFromImage(image);
                     this.results.push({
@@ -190,18 +192,17 @@ class ImageTextExtractor {
                     errorCount++;
                 }
             }
-            
+
             this.displayResults();
             this.updateActionButtons();
-            
+
             if (successCount > 0) {
                 this.showNotification(`extraction completed: ${successCount} success, ${errorCount} failed`, 'success');
             } else {
                 this.showNotification('all extractions failed', 'error');
             }
-            
+
         } catch (error) {
-            console.error('extraction error:', error);
             this.addStatusMessage(`critical error: ${error.message}`, 'error');
             this.showNotification('text extraction failed', 'error');
         } finally {
@@ -237,7 +238,7 @@ class ImageTextExtractor {
 
     displayResults() {
         this.resultsContainer.innerHTML = '';
-        
+
         if (this.results.length === 0) {
             this.resultsContainer.innerHTML = '<p class="placeholder">no text found</p>';
             return;
@@ -246,7 +247,7 @@ class ImageTextExtractor {
         this.results.forEach((result, index) => {
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
-            
+
             if (result.error) {
                 resultItem.innerHTML = `
                     <h3>${result.imageName} (ERROR)</h3>
@@ -258,9 +259,9 @@ class ImageTextExtractor {
                     <div class="text-content">${result.text || 'no text detected'}</div>
                 `;
             }
-            
+
             this.resultsContainer.appendChild(resultItem);
-            
+
             if (index < this.results.length - 1) {
                 const separator = document.createElement('div');
                 separator.className = 'result-separator';
@@ -311,21 +312,17 @@ class ImageTextExtractor {
         }
     }
 
-    showError(message) {
-        this.resultsContainer.innerHTML = `<p class="placeholder">${message}</p>`;
-    }
-
     showNotification(message, type = 'success') {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.textContent = message;
-        
+
         document.body.appendChild(notification);
-        
+
         setTimeout(() => {
             notification.classList.add('show');
         }, 100);
-        
+
         setTimeout(() => {
             notification.classList.remove('show');
             setTimeout(() => {
@@ -352,7 +349,6 @@ class ImageTextExtractor {
 
 const extractor = new ImageTextExtractor();
 
-// global wrapper
 function openRepo() {
     extractor.openRepo();
 }
@@ -363,4 +359,4 @@ function showAbout() {
 
 function closeModal() {
     extractor.closeModal();
-} 
+}
