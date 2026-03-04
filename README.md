@@ -11,6 +11,10 @@
 
 Welcome to Image Text Extractor! it's perfect for digitizing documents, extracting text from screenshots, processing handwritten notes, and converting image-based text into editable content!
 
+<div align="center">
+  <img width="1920" height="1080" alt="Screenshot (96)" src="https://github.com/user-attachments/assets/4e6b8a72-257d-47d0-8766-bf235bf92ba9" />
+
+</div>
 ## ✨ Key Features
 
 * 🔍 **Advanced OCR Technology**
@@ -115,9 +119,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🌟 Screenshots
 
-<div align="center">
-  <p><i>Screenshots coming soon!</i></p>
-</div>
 
 <div align="center">
   <a href="https://github.com/ShiiiivanshSingh/img2txt"><img src="https://img.shields.io/badge/📸%20Try%20Image%20Text%20Extractor%20Now-4285F4?style=for-the-badge" alt="Try Image Text Extractor Now"></a>
